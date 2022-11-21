@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background-image: url("https://images.unsplash.com/photo-1583794018021-c841442da0e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJhbCUyMHZpZXd8ZW58MHx8MHx8&w=1000&q=80");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+	<script src="https://kit.fontawesome.com/5197a2f084.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.list-type{
+			list-style: none;
+			font-size: 3rem;
+		}
+	</style>
+	<script type="text/javascript">
+		function todo(){
+	 let newTodo=document.getElementById("newTodo").value
+	 document.getElementById("newTodo").value=""
+	 if (newTodo==="") {
+	 	alert("enter  todo")
+	 }
+       else{
+	 addTodo(newTodo)
+	}
+}
+
+	function addTodo(newvalue){
+		const d=new Date();
+		let ul=document.querySelector("ul")
+		//console.log(ul)
+		let li=document.createElement("li")
+		li.innerHTML=`
+		<span class="listitem">${newvalue}${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}</span>
+		<i class="fa-solid
+		fa-rectangle-xmark"></i>
+		  <button name="deleteButton" ><i class="fas fa-trash"></i></button>
+		`;
+		li.classList.add("list-type")
+		ul.appendChild(li)
+
+
+	}
+	</script>
+	<style type="text/css">
+		#newTodo{
+			background-color:whitesmoke;
+			padding: 0.7%;
+			margin-left: 40%;
+
+		}
+		#lucky{
+			color: blue;
+			
+			background-image: url()
+
+
+		}
+		#babu{
+			margin-left: 40%;
+		}
+
+	</style>
+</head>
+<body>
+     <input id="newTodo" placeholder="Enter todo">
+     	<ul id="lucky">
+		
+	</ul>
+     <button onclick="todo()" id="babu">submit</button>
+</body>
+</html>
